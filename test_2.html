@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XB3PR2Y1TQ"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-XB3PR2Y1TQ');
+    </script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>HeadArtist: Text-conditioned 3D Head Generation with Self Score Distillation</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,500,600' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="assets/css/Highlight-Clean.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.jpg">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.jpg">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.jpg">
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="robots" content="noindex">
+
+    <meta property="og:site_name" content="HeadArtist" />
+    <meta property="og:type" content="video.other" />
+    <meta property="og:title" content="HeadArtist: Text-conditioned 3D Head Generation with Self Score Distillation" />
+    <meta property="og:description" content="HeadArtist: Text-conditioned 3D Head Generation with Self Score Distillation, 2023." />
+    <meta property="og:url" content="" />
+
+    <script src="assets/js/video_comparison.js"></script>
+    <script type="module" src="https://unpkg.com/@google/model-viewer@2.0.1/dist/model-viewer.min.js"></script>
+</head>
+
+<body>
+    <div class="highlight-clean" style="padding-bottom: 10px;">
+         <div class="container" style="max-width: 1024px; margin-bottom: 20px;">
+            <h1 class="text-center"><span style="font-size: 2.5rem; color: #f4b183; font-style: oblique; font-family: cursive; font-weight: bolder " >HeadArtist</span>: Text-conditioned 3D Head Generation with Self Score Distillation</h1>
+        </div>
+        <div class="container" style="max-width: 980px; margin-bottom: 20px;">
+             <div class="row authors">
+                <div class="col">
+                    <h5 class="text-center"><a class="text-center" href="https://kumapowerliu.github.io/">Hongyu Liu<sup>1,2</sup> </a></h5>
+                </div>
+                <div class="col">
+                    <h5 class="text-center"><a href="https://xuanwangvc.github.io/">Xuan Wang<sup>2</sup></a></h5>
+                </div>
+                <div class="col">
+                    <h5 class="text-center"><a class="text-center" href="http://raywzy.com/">Ziyu Wan<sup>3</sup></a></h5>
+                </div>
+                <div class="col">
+                    <h5 class="text-center"><a class="text-center" href="https://shenyujun.github.io/">Yujun Shen<sup>2</sup></a></h5>
+                </div>
+                <div class="col">
+                    <h5 class="text-center"><a class="text-center" href="https://ybsong00.github.io/">Yibing Song<sup>4</sup></a></h5>
+                </div>
+                <div class="col">
+                    <h5 class="text-center"><a class="text-center" href="https://www.cityu.edu.hk/stfprofile/jingliao.htm">Jing Liao<sup>3</sup></a></h5>
+                </div>
+                <div class="col">
+                    <h5 class="text-center"><a class="text-center" href="https://cqf.io/">Qifeng Chen<sup>1</sup></a></h5>
+                </div>
+            </div>
+            <div class="row affiliations">
+                <div class="col">
+                    <h6 class="text-center"><a class="text-center"><sup>1</sup>Hong Kong University of Science and Technology</a></h6>
+                </div>
+                <div class="col">
+                    <h6 class="text-center"><a class="text-center"><sup>2</sup>Ant Research</a></h6>
+                </div>
+                <div class="col">
+                    <h6 class="text-center"><a class="text-center"><sup>3</sup>City University of HongKong</a></h6>
+                </div>
+                <div class="col">
+                    <h6 class="text-center"><a class="text-center"><sup>4</sup>AI<sup>3</sup> Institute, Fudan University</a></h6>
+                </div>
+            </div>
+        </div>
+        <div class="buttons" style="margin-top: 8px; margin-bottom: 8px;">
+            <a class="btn btn-light" role="button" href=" ">
+                <svg style="width:24px;height:24px;margin-left:-12px;margin-right:12px" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M16 0H8C6.9 0 6 .9 6 2V18C6 19.1 6.9 20 8 20H20C21.1 20 22 19.1 22 18V6L16 0M20 18H8V2H15V7H20V18M4 4V22H20V24H4C2.9 24 2 23.1 2 22V4H4M10 10V12H18V10H10M10 14V16H15V14H10Z"></path>
+                </svg>Paper
+            </a>
+            <a class="btn btn-light" role="button" href="./index.html">
+                <svg style="visibility:hidden;width:0px;height:24px;margin-left:-12px;margin-right:12px" width="0px" height="24px" viewBox="0 0 375 531">
+                    <polygon stroke="#000000" points="0.5,0.866 459.5,265.87 0.5,530.874 "></polygon>
+                </svg>
+                Project
+            </a>
+            <a class="btn btn-light" role="button" href="https://github.com/KumapowerLIU/HeadArtist">
+                <svg xmlns="http://www.w3.org/2000/svg" style="width:24px;height:24px;margin-left:-12px;margin-right:12px" viewBox="0 0 24 24">
+                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729
+                            1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322
+                            3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823
+                            2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path>
+                </svg>
+                Code
+            </a>
+            <a class="btn btn-light" role="button" href="gallery_0.html">
+                <svg style="width:24px;height:24px;margin-left:-12px;margin-right:12px" width="24px" height="24px" viewBox="0 0 375 531">
+                    <polygon stroke="#000000" points="0.5,0.866 459.5,265.87 0.5,530.874 "></polygon>
+                </svg>
+                Generation Gallery
+            </a>
+            <a class="btn btn-light" role="button" href="gallery_editing_0.html">
+                <svg style="width:24px;height:24px;margin-left:-12px;margin-right:12px" width="24px" height="24px" viewBox="0 0 375 531">
+                    <polygon stroke="#000000" points="0.5,0.866 459.5,265.87 0.5,530.874 "></polygon>
+                </svg>
+                Editing Gallery
+            </a>
+        </div>
+        <!-- <div class="container" style="max-width: 768px;">
+            <div class="row authors">
+                <div class="col-sm-12">
+                    <h5 class="text-center" style="text-align: center">Authors anonymized</h5>
+                </div>
+            </div>
+        </div> -->
+    </div>
+    <hr class="divider" />
+    <div class="container" style="max-width: 768px;">
+        <div class="row">
+            <div class="col-sm-12">
+                <h2>All Comparison Results (9-10 / 10)</h2>
+                <p>† denotes "a head of". ‡ denotes "a DSLR portrait of"</p>
+                <p>We use official results of HeadSculpt in their webpage. And we use the threestudio implementation for other baselines. The results here are without cherry picking.</p>
+            </div>
+        </div>
+        <div class="row" style="margin-bottom: 0px;">
+            <div class="col-xs-12 compare-title  compare-title-sm">
+                <p>Dreamfusion</p>
+            </div>
+            <div class="col-xs-12 compare-title">
+                <p>ProlificDreamer</p>
+            </div>
+            <div class="col-xs-12 compare-title">
+                <p>LatentNerf</p>
+            </div>
+            <div class="col-xs-12 compare-title">
+                <p>Fantasia3D</p>
+            </div>
+            <div class="col-xs-12 compare-title">
+                <p>HeadSculpt</p>
+            </div>
+            <div class="col-xs-12 compare-title">
+                <p>Ours</p>
+            </div>
+        </div>
+
+        <div class="row captioned_videos" id="res_8" style="margin-top: 0px; margin-bottom: 0px ;">
+            <video class="video lazy" loop playsinline autoplay muted style="width: 100%">
+                <source data-src="static/comparison/image/Two-face.mp4" type="video/mp4"></source>
+            </video>
+            <video class="video lazy" loop playsinline autoplay muted style="width: 100%">
+                <source data-src="static/comparison/normal/Two-face.mp4" type="video/mp4"></source>
+            </video>
+            <p class="compare-caption">a DSLR portrait of Two-face in DC</p>
+        </div>
+        <div class="row captioned_videos" id="res_9" style="margin-top: 0px; margin-bottom: 0px ;">
+            <video class="video lazy" loop playsinline autoplay muted style="width: 100%">
+                <source data-src="static/comparison/image/vincent.mp4" type="video/mp4"></source>
+            </video>
+            <video class="video lazy" loop playsinline autoplay muted style="width: 100%">
+                <source data-src="static/comparison/normal/vincent.mp4" type="video/mp4"></source>
+            </video>
+            <p class="compare-caption">a portrait of Vincent van Gogh</p>
+        </div>
+
+<!--        <div class="row captioned_videos" id="res_1" style="margin-top: 0px; margin-bottom: 0px ;">-->
+<!--            <video class="video lazy" loop playsinline autoplay muted style="width: 100%">-->
+<!--                <source data-src="static/merged_results_320/solider_img.mp4" type="video/mp4"></source>-->
+<!--            </video>-->
+<!--            <video class="video lazy" loop playsinline autoplay muted style="width: 100%">-->
+<!--                <source data-src="static/merged_results_320/solider_normal.mp4" type="video/mp4"></source>-->
+<!--            </video>-->
+<!--            <p class="compare-caption">‡ a female soldier, wearing a helmet</p>-->
+<!--        </div>-->
+<!--        <div class="row captioned_videos" id="res_2" style="margin-top: 0px; margin-bottom: 0px ;">-->
+<!--            <video class="video lazy" loop playsinline autoplay muted style="width: 100%">-->
+<!--                <source data-src="static/merged_results_320/solider_img.mp4" type="video/mp4"></source>-->
+<!--            </video>-->
+<!--            <video class="video lazy" loop playsinline autoplay muted style="width: 100%">-->
+<!--                <source data-src="static/merged_results_320/solider_normal.mp4" type="video/mp4"></source>-->
+<!--            </video>-->
+<!--            <p class="compare-caption">‡ a female soldier, wearing a helmet</p>-->
+<!--        </div>-->
+<!--        <div class="row captioned_videos" id="res_3" style="margin-top: 0px; margin-bottom: 0px ;">-->
+<!--            <video class="video lazy" loop playsinline autoplay muted style="width: 100%">-->
+<!--                <source data-src="static/merged_results_320/solider_img.mp4" type="video/mp4"></source>-->
+<!--            </video>-->
+<!--            <video class="video lazy" loop playsinline autoplay muted style="width: 100%">-->
+<!--                <source data-src="static/merged_results_320/solider_normal.mp4" type="video/mp4"></source>-->
+<!--            </video>-->
+<!--            <p class="compare-caption">‡ a female soldier, wearing a helmet</p>-->
+<!--        </div>-->
+        <div class="row" style="margin-bottom: 0px;">
+            <div class="col-sm-3" style="margin-left:auto">
+                <a href="test_1.html" class="btn btn-primary btn-lg ">
+                    Previous Page
+                </a>
+            </div>
+            <div class="col-sm-3" style="margin-right:auto">
+                <a href="test_3.html" class="btn btn-primary btn-lg disabled">
+                    Next Page
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <hr class="divider" />
+    <div class="container" style="max-width: 768px;">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Citation</h2>
+                <code>
+                    @article{liu2023HeadArtist,<br>
+                    &nbsp; author = {Hongyu Liu, Xuan Wang, Ziyu Wan, Yujun Shen, Yibing Song, Jing Liao, Qifeng Chen},<br>
+                    &nbsp; title  = {HeadArtist: Text-conditioned 3D Head Generation with Self Score Distillation},<br>
+                    &nbsp; journal = {arXiv:xxxx},<br>
+                    &nbsp; year   = {2023},<br>
+                }</code></div>
+        </div>
+    </div>
+
+    <hr class="divider" />
+    <div class="container" style="max-width: 768px;">
+        <footer>
+            <p> Website template from <a href="https://dreamfusion3d.github.io/">DreamFusion</a>. We thank the authors for the open-source code.</p>
+        </footer>
+    </div>
+    <script src="https://polyfill.io/v3/polyfill.js?features=IntersectionObserver"></script>
+    <script src="assets/js/yall.js"></script>
+    <script>
+        yall(
+            {
+                observeChanges: true
+            }
+        );
+    </script>
+    <script src="assets/js/scripts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://uploads-ssl.webflow.com/51e0d73d83d06baa7a00000f/js/webflow.fd002feec.js"></script>
+    <!-- Import the component -->
+</body>
+
+</html>
