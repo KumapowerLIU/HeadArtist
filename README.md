@@ -5,7 +5,7 @@ The official code of HeadArtist: Text-conditioned 3D Head Generation with Self S
 ### [Project Page](https://kumapowerliu.github.io/HeadArtist/) | [Paper (ArXiv)]()
 
 
-[Hongyu Liu](http://raywzy.com/)<sup>1,2</sup>,
+[Hongyu Liu](https://kumapowerliu.github.io/)<sup>1,2</sup>,
 [Xuan Wang](https://xuanwangvc.github.io/)<sup>2</sup>,
 [Ziyu Wan](http://raywzy.com/)<sup>3</sup>,
 [Yujun Shen](https://shenyujun.github.io/)<sup>2</sup>,
