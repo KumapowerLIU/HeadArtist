@@ -2,7 +2,7 @@
 The official code of HeadArtist: Text-conditioned 3D Head Generation with Self Score Distillation
 <img src='doc/show.PNG'/>
 
-### [Project Page](https://kumapowerliu.github.io/HeadArtist/) | [Paper (ArXiv)]()
+### [Project Page](https://kumapowerliu.github.io/HeadArtist/) | [Paper (ArXiv)](https://arxiv.org/abs/2312.07539)
 
 
 [Hongyu Liu](https://kumapowerliu.github.io/)<sup>1,2</sup>,
