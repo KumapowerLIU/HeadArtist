@@ -1,0 +1,100 @@
+name: "headartist-geometry"
+tag: "${rmspace:${system.prompt_processor.prompt},_}"
+exp_root_dir: "outputs"
+seed: 42
+
+data_type: "random-camera-datamodule"
+data:
+  batch_size: 1
+  width: 512
+  height: 512
+  camera_distance_range: [3, 3]
+  fovy_range: [30, 50]
+  camera_perturb: 0.
+  center_perturb: 0.
+  up_perturb: 0.
+  elevation_range: [-10, 45]
+  azimuth_range: [-180, 180]
+  batch_uniform_azimuth: true
+  eval_camera_distance: 3.
+  eval_fovy_deg: 45.
+
+
+system_type: "headartist-system"
+system:
+  latent_steps: 1000
+  geometry_type: "implicit-sdf"
+
+  geometry:
+    radius: 1.0
+    n_feature_dims: 0
+    isosurface_resolution: 128
+    isosurface_deformable_grid: true
+    isosurface_coarse_to_fine: false
+    shape_init: head:./load/headartist
+
+
+
+  material_type: "no-material" # unused
+  material:
+    n_output_dims: 0
+
+  background_type: "solid-color-background" # unused
+
+  renderer_type: "nvdiff-rasterizer"
+
+  prompt_processor_type: "stable-diffusion-prompt-processor"
+  prompt_processor:
+    pretrained_model_name_or_path: "/nas6/hongyuliu/stable-diffusion-2-1-base"
+    prompt: ???
+
+  landmark_dir: 'load/headartist/tmp.png'
+  guidance_type: "ssd-head-guidance"
+  guidance:
+    pretrained_model_name_or_path: "/nas6/hongyuliu/stable-diffusion-2-1-base"
+    controlnet_name_or_path: "/home/liuhongyu/code/ControlNetMediaPipeFace"
+    guidance_scale: 100.
+    condition_scale: 1.
+    max_step_percent: 0.5
+
+
+  loggers:
+    wandb:
+      enable: false
+      project: 'threestudio'
+      name: None
+
+  loss:
+    lambda_ssd: 1.
+    lambda_normal_consistency: [5000,7000.,10000.,5001]
+    lambda_laplacian_smoothness: 10000.
+
+
+
+  optimizer:
+    name: AdamW
+    args:
+      betas: [0.9, 0.99]
+      eps: 1.e-15
+      lr: 0.001
+    params:
+      geometry.encoding:
+        lr: 0.001
+      geometry.sdf_network:
+        lr: 0.001
+      geometry.deformation_network:
+        lr: 0.001
+
+trainer:
+  max_steps: 15000
+  log_every_n_steps: 1
+  num_sanity_val_steps: 1
+  val_check_interval: 500
+  enable_progress_bar: true
+#  precision: 16-mixed will have some bugs
+  precision: 32
+
+checkpoint:
+  save_last: true # save at each validation time
+  save_top_k: -1
+  every_n_train_steps: ${trainer.max_steps}
