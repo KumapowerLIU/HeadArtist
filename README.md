@@ -143,7 +143,7 @@ Here we just briefly introduce the code structure of this project. We will make 
 Our code is heavily built on the very amazing open-source project ***threestudio***:  
 
 
-- **[threestudio](https://github.com/threestudio-project/threestudio)** :a unified framework for 3D content creation from text prompts, single images, and few-shot images, by lifting 2D text-to-image generation models..
+- **[threestudio](https://github.com/threestudio-project/threestudio)** :a unified framework for 3D content creation from text prompts, single images, and few-shot images, by lifting 2D text-to-image generation models.
  
 
 
@@ -152,11 +152,22 @@ Our code is heavily built on the very amazing open-source project ***threestudio
 If you find HeadArtist helpful, please consider citing:
 
 ```
-@article{liu2023HeadArtist,
-  author = {Hongyu Liu, Xuan Wang, Ziyu Wan, Yujun Shen, Yibing Song, Jing Liao, Qifeng Chen},
-  title = {HeadArtist: Text-conditioned 3D Head Generation with Self Score Distillation},
-  journal = {arXiv:2312.07539},
-  year = {2023},
+@inproceedings{10.1145/3641519.3657512,
+author = {Liu, Hongyu and Wang, Xuan and Wan, Ziyu and Shen, Yujun and Song, Yibing and Liao, Jing and Chen, Qifeng},
+title = {HeadArtist: Text-conditioned 3D Head Generation with Self Score Distillation},
+year = {2024},
+isbn = {9798400705250},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3641519.3657512},
+doi = {10.1145/3641519.3657512},
+abstract = {We present HeadArtist for 3D head generation following human-language descriptions. With a landmark-guided ControlNet serving as a generative prior, we come up with an efficient pipeline that optimizes a parameterized 3D head model under the supervision of the prior distillation itself. We call such a process self score distillation (SSD). In detail, given a sampled camera pose, we first render an image and its corresponding landmarks from the head model, and add some particular level of noise onto the image. The noisy image, landmarks, and text condition are then fed into a frozen ControlNet twice for noise prediction. We conduct two predictions via the same ControlNet structure but with different classifier-free guidance (CFG) weights. The difference between these two predicted results directs how the rendered image can better match the text of interest. Experimental results show that our approach produces high-quality 3D head sculptures with rich geometry and photo-realistic appearance, which significantly outperforms state-of-the-art methods. We also show that our pipeline supports editing operations on the generated heads, including both geometry deformation and appearance change. Project page:https://kumapowerliu.github.io/HeadArtist.},
+booktitle = {ACM SIGGRAPH 2024 Conference Papers},
+articleno = {16},
+numpages = {12},
+keywords = {3D Head Generation, 3D Head editing, Self Score Distillation, Text Guided},
+location = {Denver, CO, USA},
+series = {SIGGRAPH '24}
 }
 ```
 
