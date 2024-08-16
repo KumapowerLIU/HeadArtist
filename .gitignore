@@ -181,9 +181,9 @@ outputs/
 outputs-gradio/
 
 # pretrained model weights
-*.ckpt
-*.pt
-*.pth
+# *.ckpt
+# *.pt
+# *.pth
 
 # wandb
 wandb/
